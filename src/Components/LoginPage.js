@@ -13,7 +13,7 @@ const LoginPage = () => {
             email,
             password
         }
-        const response = await fetch(``, {
+        const response = await fetch(`https://crm-a60b.onrender.com/api/user/login`, {
             method: "POST",
             body: JSON.stringify(userDetails),
             headers: {

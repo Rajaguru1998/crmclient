@@ -12,7 +12,7 @@ const Customerdetail = () => {
         }
         let token = localStorage.getItem("token")
         const fetchAllData = async () => {
-            const res = await fetch(``, {
+            const res = await fetch(`https://crm-a60b.onrender.com/api/customers/all`, {
                 method: "GET",
                 headers: {
                     "x-auth-token": token

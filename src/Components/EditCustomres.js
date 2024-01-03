@@ -41,8 +41,8 @@ const EditPage = ({ userData, setUserData }) => {
             
         }
 
-        // const res = await fetch(`https://interview2.onrender.com/api/customers/edit/${id}`, {
-            const res = await fetch(``, {
+        // const res = await fetch(`https://crm-a60b.onrender.com/api/customers/edit/${id}`, {
+            const res = await fetch(`https://crm-a60b.onrender.com/api/customers/edit/${id}`, {
             method: "PUT",
             body: JSON.stringify(editedCustomers),
             headers: {

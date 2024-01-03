@@ -18,7 +18,7 @@ const UserPage = ({ userData, setUserData }) => {
         let token = localStorage.getItem("token")
         setTokenId(token)
         const fetchUserData = async () => {
-            const res = await fetch(``, {
+            const res = await fetch(`https://crm-a60b.onrender.com/api/customers/user`, {
                 method: "GET",
                 headers: {
                     "x-auth-token": token

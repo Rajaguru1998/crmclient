@@ -31,7 +31,7 @@ const Addcustomers = ({ userData, setUserData }) => {
             email,
             password
         }
-        const res = await fetch(`/customers/add`, {
+        const res = await fetch(`https://crm-a60b.onrender.com/api/customers/add`, {
             method: "POST",
             body: JSON.stringify(newCustomers),
             headers: {

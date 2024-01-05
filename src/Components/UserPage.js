@@ -84,7 +84,7 @@ const UserPage = ({ userData, setUserData }) => {
                                 <p>Number: {data.number}</p>
                                 <p>Email: {data.email}</p>
                                 <p>Password: {data.password}</p>
-                                {/* <p>Posted by: {data.user.name}</p> */}
+                                <p>Posted by: {data.user.name}</p>
 
                                 <div className="bt">
                                     <Button onClick={() => navigate(`/edit/${data._id}/${tokenId}`)}>Edit</Button>
@@ -110,4 +110,4 @@ const UserPage = ({ userData, setUserData }) => {
     )
 }
 
-export default UserPage;
+export default UserPage

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Base from "../Base/Base"
 import { useNavigate } from "react-router-dom"
 import { Paper, Typography } from "@mui/material";
-const Customerdetail = () => {
+const Customersdetail = () => {
     const [customers, setCustomers] = useState([]);
     const [error, setError] = useState("");
     const navigate = useNavigate()
@@ -12,7 +12,7 @@ const Customerdetail = () => {
         }
         let token = localStorage.getItem("token")
         const fetchAllData = async () => {
-            const res = await fetch(`https://crm-a60b.onrender.com/api/customers/all`, {
+            const res = await fetch(`https://crm-a60b.onrender.com/api/costomers/all`, {
                 method: "GET",
                 headers: {
                     "x-auth-token": token
@@ -29,13 +29,13 @@ const Customerdetail = () => {
         fetchAllData()
     }, [navigate, customers])
     return (
-        <div className="customerdetail-container">
+        <div className=" Customers-container">
             <Base>
                 {customers && (
                     <div className="customers-container">
                         {customers?.map((data, index) => (
                             <Paper
-                                className="customer-paper"
+                                className="customers-paper"
                                 elevation={6}
                                 key={data._id}
                                 sx={{
@@ -52,8 +52,7 @@ const Customerdetail = () => {
                                 <p>Location: {data.location}</p>
                                 <p>Number: {data.number}</p>
                                 <p>Email: {data.email}</p>
-                                <p>Password: {data.Password}</p>
-                                {/* <p>Posted by: {data.user.name}</p> */}
+                                <p>Password: {data.Password}</p>                               
                                 <p>Posted by: {data.user ? data.user.name : 'Unknown User'}</p>
                                 <p>Date: {data.date}</p>
                             </Paper>
@@ -72,4 +71,4 @@ const Customerdetail = () => {
     )
 }
 
-export default Customerdetail
+export default Customersdetail;

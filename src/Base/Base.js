@@ -48,8 +48,8 @@ function Base({ title, description, children }) {
                                 edge="end"
                                 color="inherit"
                                 onClick={() => navigate("/")}
-                                aria-label="dashboard" sx={{ mr: 2 }}>
-                                Dashboard
+                                aria-label="customersdetail" sx={{ mr: 2 }}>
+                                Cutomersdetail
                             </IconButton>
 
                             <IconButton
@@ -58,7 +58,7 @@ function Base({ title, description, children }) {
                                 aria-label="students"
                                 onClick={() => navigate("/user")}
                                 sx={{ mr: 2 }}>
-                                Customer Id
+                                CustomerId
                             </IconButton>
 
                             {/* <IconButton

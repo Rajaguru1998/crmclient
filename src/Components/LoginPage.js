@@ -33,8 +33,8 @@ const LoginPage = () => {
     }
     const handleDemoLogin = () => {
 
-        setEmail("Rajaguru@gmail.com ");
-        setPassword("12345");
+        setEmail("rajaguru@gmail.com ");
+        setPassword("770894");
     };
     return (
 

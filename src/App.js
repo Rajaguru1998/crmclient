@@ -1,14 +1,13 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Customerdetail from './Components/Customerdetail';
+import Customersdetail from './Components/CustomerDetail';
 import LoginPage from './Components/LoginPage';
 // import Addcustomers from './Components/AddCustomers ';
-import Addcustomers from './Components/Addcustomers.js';
-
-import EditPage from './Components/EditCustomres';
+import Addcustomers from './Components/Addcustomers';
+import EditPage from './Components/EditCustomer';
 import UserPage from './Components/UserPage';
 import { useState } from 'react';
-import SignupPage from './Components/SignuPage';
+import SignupPage from './Components/SignupPage';
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -17,7 +16,7 @@ function App() {
       <Routes>
 
         <Route exact path="/"
-          element={<Customerdetail />} />
+          element={<Customersdetail />} />
 
         <Route path="/login"
           element={<LoginPage />}

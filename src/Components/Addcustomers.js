@@ -29,10 +29,11 @@ const Addcustomers = ({ userData, setUserData }) => {
             location,
             number,
             email,
-            password
-            // postedBy:userData.name
+            password,
+         postedBy:userData.name
         }
-        const res = await fetch(`https://crm-a60b.onrender.com/api/customers/add`, {
+        // const res = await fetch(`https://crm-a60b.onrender.com/api/customers/add`, {
+         const res =await fetch(`https://crmserver-7k9y.onrender.com/api/customers/add`,{   
             method: "POST",
             body: JSON.stringify(newCustomers),
             headers: {
@@ -119,4 +120,4 @@ const Addcustomers = ({ userData, setUserData }) => {
     )
 }
 
-export default Addcustomers
+export default Addcustomers;

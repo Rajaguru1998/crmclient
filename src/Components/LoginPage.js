@@ -13,7 +13,8 @@ const LoginPage = () => {
             email,
             password
         }
-        const response = await fetch(`https://crm-a60b.onrender.com/api/user/login`, {
+        // const response = await fetch(`https://crm-a60b.onrender.com/api/user/login`, {
+            const response =await fetch(`https://crmserver-7k9y.onrender.com/api/user/login`,{  
             method: "POST",
             body: JSON.stringify(userDetails),
             headers: {
@@ -33,41 +34,12 @@ const LoginPage = () => {
     }
     const handleDemoLogin = () => {
 
-        setEmail("rajaguru@gmail.com ");
-        setPassword("770894");
+        setEmail("rajaguru@gmail.com");
+        setPassword("12121998");
     };
     return (
 
-        // <Base>
-
-        //     <TextField label="email" variant="outlined" fullWidth sx={{ m: 1 }}
-        //         placeholder="Enter the email"
-        //         value={email}
-        //         onChange={(e) => setEmail(e.target.value)}
-        //         type="email"
-        //     />
-        //     <TextField label="password" variant="outlined" fullWidth sx={{ m: 1 }}
-        //         placeholder="Enter the password"
-        //         type="password"
-        //         value={password}
-        //         onChange={(e) => setPassword(e.target.value)}
-        //     />
-
-
-
-        //     <Button
-        //         className="login-button"
-        //         type="submit"
-        //         variant="contained"
-        //         onClick={handleLogin}
-        //     >Login</Button>
-        //     {error ?
-        //         <Typography color={"danger"}>
-        //             {error}
-        //         </Typography> : ""}
-
-        // </Base >
-        <Base>
+               <Base>
             <div className="box">
                 <div className="form">
                     <p className="lo">LOGIN</p>

@@ -41,8 +41,8 @@ const EditPage = ({ userData, setUserData }) => {
             
         }
 
-        // const res = await fetch(`https://crm-a60b.onrender.com/api/customers/edit/${id}`, {
-            const res = await fetch(`https://crm-a60b.onrender.com/api/customer/edit/${id}`, {
+            // const res = await fetch(`https://crm-a60b.onrender.com/api/customer/edit/${id}`, {
+            const res =await fetch(`https://crmserver-7k9y.onrender.com/api/customers/edit/${id}`,{  
             method: "PUT",
             body: JSON.stringify(editedCustomers),
             headers: {
@@ -136,4 +136,4 @@ const EditPage = ({ userData, setUserData }) => {
     )
 }
 
-export default EditPage
+export default EditPage;

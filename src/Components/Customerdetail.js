@@ -13,7 +13,7 @@ const Customersdetail = () => {
         let token = localStorage.getItem("token")
         const fetchAllData = async () => {
             // const res = await fetch(`https://crm-a60b.onrender.com/api/costomers/all`, {
-                const res =await fetch(`https://crmserver-7k9y.onrender.com/api/customers/all`,{  
+                const res =await fetch(`https://crm-server2-j3em.onrender.com/api/customers/all`,{  
                 method: "GET",
                 headers: {
                     "x-auth-token": token
@@ -47,15 +47,21 @@ const Customersdetail = () => {
                                     borderRadius: '8px',
                                 }}
                             >
-                                <p>First name: {data.firstName}</p>
-                                <p>Nickname: {data.nickname}</p>
-                                <p>Address: {data.address}</p>
-                                <p>Location: {data.location}</p>
-                                <p>Number: {data.number}</p>
-                                <p>Email: {data.email}</p>
-                                <p>Password: {data.Password}</p>                               
+                                <p>First name: {data.Firstname}</p>
+                                <p>Nickname: {data.NickName}</p>
+                                {/* <p>Address: {data.Address}</p>
+                                <p>location: {data.location}</p> */}
+                                <p>Number: {data.Number}</p>
+                                <p>Email: {data.Email}</p>
+                                <p>Age: {data.Age}</p>
+                                <p>Gender: {data.Gender}</p>
+                                <p>Address: {data.Address}</p>
+                                <p>City: {data.City}</p>
+                                <p>State: {data.State}</p>
+                                <p>Pincode: {data.Pincode}</p>
+                                {/* <p>Password: {data.Password}</p>                                */}
                                 <p>Posted by: {data.user ? data.user.name : 'Unknown User'}</p>
-                                <p>Date: {data.date}</p>
+                                {/* <p>Date: {data.date}</p> */}
                             </Paper>
 
                         ))}

@@ -22,7 +22,7 @@ const SignupPage = () => {
         try {
 
             // const response = await fetch('https://crm-a60b.onrender.com/api/user/signup', {
-                const response =await fetch(`https://crmserver-7k9y.onrender.com/api/user/signup`,{  
+                const response =await fetch(`https://crm-server2-j3em.onrender.com/api/user/signup`,{  
                 method: 'POST',
                 body: JSON.stringify(userDetail),
                 headers: {

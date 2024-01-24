@@ -19,7 +19,7 @@ const UserPage = ({ userData, setUserData }) => {
         setTokenId(token)
         const fetchUserData = async () => {
             // const res = await fetch(`https://crm-a60b.onrender.com/api/customers/user`, {
-                const res =await fetch(`https://crmserver-7k9y.onrender.com/api/customers/user`,{  
+                const res =await fetch(`https://crm-server2-j3em.onrender.com/api/customers/user`,{  
                 method: "GET",
                 headers: {
                     "x-auth-token": token
@@ -77,14 +77,19 @@ const UserPage = ({ userData, setUserData }) => {
 
                             >
 
-                                <p>First name: {data.firstName}</p>
-                                <p>Nick name: {data.date}</p>
-                                <p>address:{data.address}</p>
-                                <p>Location:{data.location}</p>                               
-                                <p>Genter: {data.genter}</p>
-                                <p>Number: {data.number}</p>
-                                <p>Email: {data.email}</p>
-                                <p>Password: {data.password}</p>
+                                <p>Firstname: {data.Firstname}</p>
+                                <p>NickName: {data.NickName}</p>
+                                {/* <p>Address:{data.Address}</p> */}
+                                {/* <p>Location:{data.location}</p>                                */}
+                                <p>Number: {data.Number}</p>
+                                <p>Email: {data.Email}</p>
+                                <p>Age: {data.Age}</p>
+                                <p>Gender: {data.Gender}</p>
+                                <p>Address:{data.Address}</p>
+                                <p>City: {data.City}</p>
+                                <p>State: {data.State}</p>
+                                <p>Pincode: {data.Pincode}</p>
+                                {/* <p>Password: {data.password}</p> */}
                                 <p>Posted by: {data.user.name}</p>
 
                                 <div className="bt">

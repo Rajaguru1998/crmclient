@@ -14,7 +14,8 @@ const LoginPage = () => {
             password
         }
         // const response = await fetch(`https://crm-a60b.onrender.com/api/user/login`, {
-            const response =await fetch(`https://crmserver-7k9y.onrender.com/api/user/login`,{  
+            // const response =await fetch(`https://crmserver-7k9y.onrender.com/api/user/login`,{  
+                const response =await fetch(`https://crm-server2-j3em.onrender.com/api/user/login`,{  
             method: "POST",
             body: JSON.stringify(userDetails),
             headers: {
@@ -34,8 +35,8 @@ const LoginPage = () => {
     }
     const handleDemoLogin = () => {
 
-        setEmail("rajaguru@gmail.com");
-        setPassword("12121998");
+        setEmail("mmraj@gmail.com");
+        setPassword("607080");
     };
     return (
 
@@ -77,7 +78,7 @@ const LoginPage = () => {
                     </div>
                     {/* <div>
                         <h2>For Testing:</h2>
-                        <h3>Email:Rajaguru@gmail.com   </h3>
+                        <h3>Email:rajaguru@gmail.com   </h3>
                         <h3>Password: 12345  </h3>
                     </div> */}
                 </div>

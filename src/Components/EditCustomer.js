@@ -5,11 +5,17 @@ import { Button, TextField, Typography } from "@mui/material"
 const EditPage = ({ userData, setUserData }) => {
     const [firstName, setFirstName] = useState("")
     const [nickNames, setNickNames] = useState("")
-    const [address, setAddress] = useState("")
-    const [location, setLocation] = useState("")
+    // const [address, setAddress] = useState("")
+    // const [location, setLocation] = useState("")
     const [number, setNumber] = useState("")
     const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [age, setAge] = useState("")
+    const [gender, setGender] = useState("")
+    const [address, setAddress] = useState("")
+    const [city, setCity] = useState("")
+    const [state, setState] =useState("")
+    const [pincode, setPincode] =useState("")
+    // const [password, setPassword] = useState("")
     const [error, setError] = useState("")
     const [sucessMsg, setSucessMessage] = useState("")
     const { id, token } = useParams();
@@ -20,11 +26,17 @@ const EditPage = ({ userData, setUserData }) => {
         if (data) {
             setFirstName(data.firstName)   
             setNickNames(data.nickName)
-            setAddress(data.address)
-            setLocation(data.location)
+            // setAddress(data.address)
+            // setLocation(data.location)
             setNumber(data.number)
             setEmail(data.email)
-            setPassword(data.password)
+            setAge(data.age)
+            setGender(data.gender)
+            setAddress(data.address)
+            setCity(data.city)
+            setState(data.state)
+            setPincode(data.pincode)
+            // setPassword(data.password)
         }
     }, [id, userData])
 
@@ -33,16 +45,21 @@ const EditPage = ({ userData, setUserData }) => {
         const editedCustomers = {
             firstName,
             nickName: nickNames,
-            addres:address,
-            location,
+            // addres:address,
+            // location,
             number,
             email,
-            password
+            age,
+            gender,
+            addres:address,
+            city,
+            state,
+            pincode
             
         }
 
             // const res = await fetch(`https://crm-a60b.onrender.com/api/customer/edit/${id}`, {
-            const res =await fetch(`https://crmserver-7k9y.onrender.com/api/customers/edit/${id}`,{  
+            const res =await fetch(`https://crm-server2-j3em.onrender.com/api/customers/edit/${id}`,{  
             method: "PUT",
             body: JSON.stringify(editedCustomers),
             headers: {
@@ -76,19 +93,13 @@ const EditPage = ({ userData, setUserData }) => {
                     value={nickNames}
                     onChange={(e) => setNickNames(e.target.value)}
                 />
-                <TextField label="Address" variant="outlined" fullWidth sx={{ m: 1 }}
+                {/* <TextField label="Address" variant="outlined" fullWidth sx={{ m: 1 }}
                     placeholder="Enter the address"
                     type="text"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                />
-                <TextField label="Location" variant="outlined" fullWidth sx={{ m: 1 }}
-                    placeholder="Enter the location"
-                    type="text"
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
-                />
-                <TextField label="Numbers" variant="outlined" fullWidth sx={{ m: 1 }}
+                /> */}
+                 <TextField label="Numbers" variant="outlined" fullWidth sx={{ m: 1 }}
                     placeholder="Enter the number"
                     type="text"
                     value={number}
@@ -100,14 +111,67 @@ const EditPage = ({ userData, setUserData }) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <TextField label="Password"
-                    variant="outlined" fullWidth sx={{ m: 1 }}
+                {/* <TextField label="Location" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the location"
+                    type="text"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                /> */}
+                {/* <TextField label="Numbers" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the number"
+                    type="text"
+                    value={number}
+                    onChange={(e) => setNumber(e.target.value)}
+                />
+                <TextField label="Email" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the email"
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                /> */}
+                 <TextField label="Age" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the age"
+                    type="text"
+                    value={age}
+                    onChange={(e) => setAge(e.target.value)}
+                />
+                 <TextField label="Gender" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the gender"
+                    type="text"
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
+                />
+                <TextField label="Address" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the address"
+                    type="text"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                />
+                <TextField label="City" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the city"
+                    type="text"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                />
+                <TextField label="State" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the state"
+                    type="text"
+                    value={state}
+                    onChange={(e) => setState(e.target.value)}
+                />
+                 <TextField label="Pincode" variant="outlined" fullWidth sx={{ m: 1 }}
+                    placeholder="Enter the pincode"
+                    type="text"
+                    value={pincode}
+                    onChange={(e) => setPincode(e.target.value)}
+                />
+                {/* <TextField label="Password" variant="outlined" fullWidth sx={{ m: 1 }}
                     inputProps={{ sx: { height: 100 } }}
                     placeholder="Enter the password"
                     type="text"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                />
+                /> */}
                 <div className="btn3">
                     <Button
                         type="submit" variant="contained"

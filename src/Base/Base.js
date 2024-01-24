@@ -58,7 +58,7 @@ function Base({ title, description, children }) {
                                 aria-label="students"
                                 onClick={() => navigate("/user")}
                                 sx={{ mr: 2 }}>
-                                CustomerId
+                                Customer
                             </IconButton>
 
                             {/* <IconButton

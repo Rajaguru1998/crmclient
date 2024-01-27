@@ -37,7 +37,7 @@ const Addcustomers = ({ userData, setUserData }) => {
             Email,
             Age,
             Gender,
-            Address,
+            Address:Address,
             City,
             State,
             Pincode,

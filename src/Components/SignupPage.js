@@ -16,6 +16,7 @@ const SignupPage = () => {
             email,
             password,
             confirmPassword,
+            name
         };
         console.log(userDetail)
 

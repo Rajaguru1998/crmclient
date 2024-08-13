@@ -82,7 +82,7 @@ const UserPage = ({ userData, setUserData }) => {
                                 {/* <p>Address:{data.Address}</p> */}
                                 {/* <p>Location:{data.location}</p>                                */}
                                 <p>Number: {data.Number}</p>
-                                <p>Email: {data.email}</p>
+                                {/* <p>Email: {data.email}</p> */}
                                 <p>Age: {data.Age}</p>
                                 <p>Gender: {data.Gender}</p>
                                 <p>Address:{data.Address}</p>

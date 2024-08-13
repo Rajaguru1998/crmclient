@@ -34,8 +34,8 @@ const LoginPage = () => {
     }
     const handleDemoLogin = () => {
 
-        setEmail("mmraj@gmail.com");
-        setPassword("607080");
+        setEmail("rajaguru@gmail.com");
+        setPassword("123");
     };
     return (
 

@@ -1,18 +1,16 @@
 import React, { useState } from "react"
-import Base from "../Base/Base"
+import Base from "../../Base/Base"
 import { Button, TextField, Typography } from "@mui/material"
 import { useNavigate, useParams } from "react-router-dom"
-
-
-
 const Addcustomers = ({ userData, setUserData }) => {
     const { token } = useParams();    
     const [Firstname, setFirstname] = useState("")
     const [NickNames, setNickNames] = useState("")
     // const [Address, setAddress] = useState("")
     // const [location, setLocation] = useState("")
+    const [Image,setImage]=useState("")
     const [Number, setNumber] = useState("")
-    const [Email, setEmail] = useState("")
+    // const [Email, setEmail] = useState("")
     const [Age, setAge] = useState("")
     const [Gender, setGender] = useState("")
     const [Address, setAddress] = useState("")
@@ -28,13 +26,14 @@ const Addcustomers = ({ userData, setUserData }) => {
     const navigate = useNavigate()
     // const user = useContext(UserContext);
     async function postNewCustomers() {
-         const newCustomers = {               
+         const newCustomers = { 
+            Image,              
             Firstname,
             NickName:NickNames,
             // Address,
             // location,
             Number,
-            email:Email,
+            // email:Email,
             Age,
             Gender,
             Address:Address,
@@ -68,7 +67,12 @@ const Addcustomers = ({ userData, setUserData }) => {
         <Base>
             <div className="add-customers-form">
                 <form>                    
-                    <TextField label="Firstname" variant="outlined" fullWidth sx={{ m: 1 }}
+                    {/* <TextField label="Image" variant="outlined" fullWidth sx={{ m: 1 }}
+                        placeholder="Enter the image url"
+                        value={Image}
+                        onChange={(e) => setImage(e.target.value)}
+                        type="text" /> */}
+                         <TextField label="Firstname" variant="outlined" fullWidth sx={{ m: 1 }}
                         placeholder="Enter the firstname"
                         value={Firstname}
                         onChange={(e) => setFirstname(e.target.value)}
@@ -97,12 +101,12 @@ const Addcustomers = ({ userData, setUserData }) => {
                         value={Number}
                         onChange={(e) => setNumber(e.target.value)}
                     />
-                    <TextField label="Email" variant="outlined" fullWidth sx={{ m: 1 }}
+                    {/* <TextField label="Email" variant="outlined" fullWidth sx={{ m: 1 }}
                         placeholder="Enter the email"
                         type="text"
                         value={Email}
                         onChange={(e) => setEmail(e.target.value)}
-                    />
+                    /> */}
                     <TextField label="Age" variant="outlined" fullWidth sx={{ m: 1 }}
                         placeholder="Enter the age"
                         type="text"

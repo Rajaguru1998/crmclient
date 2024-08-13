@@ -8,7 +8,7 @@ const EditPage = ({ userData, setUserData }) => {
     // const [address, setAddress] = useState("")
     // const [location, setLocation] = useState("")
     const [number, setNumber] = useState("")
-    const [email, setEmail] = useState("")
+    // const [email, setEmail] = useState("")
     const [age, setAge] = useState("")
     const [gender, setGender] = useState("")
     const [address, setAddress] = useState("")
@@ -29,7 +29,7 @@ const EditPage = ({ userData, setUserData }) => {
             // setAddress(data.address)
             // setLocation(data.location)
             setNumber(data.number)
-            setEmail(data.email)
+            // setEmail(data.email)
             setAge(data.age)
             setGender(data.gender)
             setAddress(data.address)
@@ -48,7 +48,7 @@ const EditPage = ({ userData, setUserData }) => {
             // addres:address,
             // location,
             number,
-            email,
+            // email,
             age,
             gender,
             addres:address,
@@ -105,12 +105,12 @@ const EditPage = ({ userData, setUserData }) => {
                     value={number}
                     onChange={(e) => setNumber(e.target.value)}
                 />
-                <TextField label="Email" variant="outlined" fullWidth sx={{ m: 1 }}
+                {/* <TextField label="Email" variant="outlined" fullWidth sx={{ m: 1 }}
                     placeholder="Enter the email"
                     type="text"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                />
+                /> */}
                 {/* <TextField label="Location" variant="outlined" fullWidth sx={{ m: 1 }}
                     placeholder="Enter the location"
                     type="text"

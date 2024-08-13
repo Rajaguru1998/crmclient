@@ -52,13 +52,20 @@ function Base({ title, description, children }) {
                                 Cutomersdetail
                             </IconButton>
 
+                            {/* <IconButton
+                                edge="end"
+                                color="inherit"
+                                onClick={() => navigate("/")}
+                                aria-label="customersdetail" sx={{ mr: 2 }}>
+                                Cutomersdetailpage
+                            </IconButton> */}
                             <IconButton
                                 edge="end"
                                 color="inherit"
                                 aria-label="students"
                                 onClick={() => navigate("/user")}
                                 sx={{ mr: 2 }}>
-                                Customer
+                                Addcustomers
                             </IconButton>
 
                             {/* <IconButton

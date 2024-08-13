@@ -13,10 +13,11 @@ const SignupPage = () => {
     const handleSignup = async () => {
 
         const userDetail = {
+            name,
             email,
             password,
             confirmPassword,
-            name
+            
         };
         console.log(userDetail)
 

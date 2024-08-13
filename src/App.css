@@ -1,4 +1,26 @@
-/* .App {
+/* General Styles */
+body {
+  background: linear-gradient(45deg, #3498db, #e74c3c, #9b59b6, #e74c3c);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* App Styles */
+.App {
   text-align: center;
 }
 
@@ -35,19 +57,9 @@
   to {
     transform: rotate(360deg);
   }
-} */
-
-
-.App {
-  text-align: center;
 }
 
-/* Base.css */
-/* .main-container {
-  
-} */
-
-
+/* Base Styles */
 .custom-app-bar {
   background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
 }
@@ -67,7 +79,7 @@
   font-weight: bold;
 }
 
-/* Add styling for the form container */
+/* Form Styles */
 .add-notes-form {
   max-width: 400px;
   margin: 0 auto;
@@ -77,7 +89,6 @@
   background-color: #f7f7f7;
 }
 
-/* Style the button */
 .add-notes-button {
   background-color: #eaff00;
   color: #fff;
@@ -85,14 +96,14 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .add-notes-button:hover {
   background-color: #0056b3;
 }
 
-/* Style the error and success messages */
+/* Message Styles */
 .color-error {
   color: red;
 }
@@ -101,51 +112,103 @@
   color: green;
 }
 
-/* Style the dashboard container */
+/* Dashboard Styles */
 .dashboard-container {
-  /* background: #f7f7f7; */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-
+/* Notes Container Styles */
 .notes-container {
-  /* background-color: #ffffff95; */
   padding: 20px;
-  width: 1200px;
-  font-family: 'Times New Roman', Times, serif;
   margin: 0 auto;
   border-radius: 4px;
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   color: black;
   font-weight: 500;
   font-size: large;
-
+}
+/* Ensure container has a margin for separation */
+.Customers-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
 }
 
-/* Style for individual questions */
+/* Apply a grid layout with three columns */
+.customers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* Styling for individual customer cards */
+.customers-paper {
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-aligns the image and text */
+}
+
+/* Hover effect to enhance card elevation */
+.customers-paper:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for text inside the card */
+.customers-paper p {
+  margin: 4px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Bold styling for the first paragraph */
+.customers-paper p:first-of-type {
+  font-weight: bold;
+}
+
+/* Styling for error messages */
+.error-message {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for customer images */
+.customer-image {
+  width: 100%; /* Make image take full width of the card */
+  max-width: 150px; /* Maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 12px; /* Space between image and text */
+}
+
+/* Custom Paper Styles */
 .custom-paper {
   background-color: #2196F3;
   padding: 16px;
   margin-bottom: 16px;
-  width: fit-content;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-
-
+/* Note Card Styles */
 .note-card {
   background: #ffffff;
   border: 1px solid #ccc;
@@ -155,40 +218,35 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the error message */
-.color-danger {
-  color: red;
+/* Button Styles */
+.bt {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Add the 3D animation to the background */
-body {
-  background: linear-gradient(45deg, #3498db, #e74c3c, #9b59b6, #e74c3c);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
+.bt button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+.bt button:hover {
+  background-color: #0056b3;
 }
 
-/* loginpage */
+/* Login Page Styles */
 .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-
 }
 
 .lo {
@@ -199,7 +257,6 @@ body {
 }
 
 .form {
-
   height: 500px;
   width: 500px;
   padding: 20px;
@@ -219,71 +276,15 @@ body {
 }
 
 .form button {
-  /* width: 50%; */
   margin-top: 10px;
-  /* border-radius: 10px; */
 }
 
-.error {
-  margin-top: 10px;
-  color: red;
-}
-
-/* Style the error message */
-.color-danger {
-  color: red;
-}
-
-/* Add the 3D animation to the background */
-body {
-  background: linear-gradient(45deg, #3498db, #e74c3c, #9b59b6, #e74c3c);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Style the main container */
-/* signuppage */
+/* Signup Page Styles */
 .main {
-
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Style the signup form */
-.log {
-  margin-top: 10px;
 }
 
 .signup-form {
@@ -307,7 +308,6 @@ body {
   font-size: medium;
 }
 
-/* Style input fields and button */
 input {
   width: 90%;
   padding: 10px;
@@ -337,39 +337,28 @@ button:hover {
   margin-top: 10px;
 }
 
+/* Paper Component Styles */
 .paper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding: 16px;
   margin-bottom: 16px;
-  margin-left: 410px;
+  margin-left: auto;
+  margin-right: auto;
   align-content: center;
-  width: 1500px;
-  height: 500px;
-
+  width: 80%;
+  height: auto;
 }
-
-/* .paper {
-  display: grid;
-  grid-template-rows: repeat(3fr, 1);
-
-  padding: 16px;
-  margin-bottom: 16px;
-
-
-} */
 
 .paper p {
   margin: 4px 0;
-
 }
 
-.paper Button {
+.paper button {
   margin: 8px 4px;
-
 }
 
-/* editcss */
+/* Edit Page Styles */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -379,100 +368,34 @@ form {
   background-color: #f7f7f7;
 }
 
-
-TextField {
+input {
   margin: 8px 0;
 }
 
-
-Button {
+button {
   margin: 16px 8px;
-  gap: 50px;
 }
 
+/* Button Gap */
 .btn3 {
   display: flex;
   gap: 10px;
   margin-left: 80px;
   margin-top: 20px;
-
 }
-
 
 Typography {
   margin-top: 8px;
   text-align: center;
 }
 
-
-/* Apply these styles for screen widths between 370px and 1300px */
-/* @media screen and (min-width: 370px) and (max-width: 1300px) {
-  .App {}
-
-  .App-header {}
-
-  .App-link {}
-
-
-  .main-container {}
-
-  .custom-app-bar {}
-
-  .custom-app-bar-toolbar {}
-
-  .custom-app-bar-title {}
-
-  .custom-icon-button {}
-
-
-  .add-notes-form {}
-
-  .add-notes-button {}
-
-  .add-notes-button:hover {}
-
-  .color-error {}
-
-  .color-success {}
-
-
-  .dashboard-container {}
-
-  .notes-container {}
-
-  .custom-paper {}
-
-  .note-card {}
-
-  .color-danger {}
-
-}
- */
-
-
-.bt {
-  display: flex;
-  gap: 10px;
-}
-
-.bt {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.bt Button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 5px 5px;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-.bt Button:hover {
-  background-color: #0056b3;
-
+/* Responsive Styles */
+@media screen and (min-width: 370px) and (max-width: 1300px) {
+  /* Adjust grid and flex layouts for responsiveness */
+  .dashboard-container,
+  .notes-container,
+  .custom-paper,
+  .paper {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
